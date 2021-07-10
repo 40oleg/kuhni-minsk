@@ -1,0 +1,122 @@
+.invite {
+    padding-bottom: 135px;
+    &__container {
+        width: 1170px;
+        @media screen and (max-width: $laptop) {
+            width: 100vw;
+        }
+    }
+
+    &__bg {
+        background: url(../img/invite-bg.png) no-repeat;
+        background-position-x: right;
+        padding-bottom: 50px;
+        @media screen and (max-width: $phone) {
+            height: 875px;
+            background: url(../img/mobile-invite-bg.png) no-repeat;
+            background-position-y: bottom;
+            background-size: contain;
+        }
+    }
+
+    &__caption {
+        text-align: left;
+        @media screen and (max-width: $phone) {
+           text-align: center;
+           font-size: 30px;
+        }
+    }
+
+    &__text {
+        position: relative;
+        margin-top: 35px;
+        margin-left: 45px;
+        font-weight: 700;
+        &::before {
+            content: url(../img/ok.png);
+            position: absolute;
+            left: -45px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        @media screen and (max-width: $phone) {
+            margin-left: 75px;
+            font-size: 22px;
+        }
+    }
+
+    &__form {
+        position: relative;
+        box-shadow: 0px 0px 25px rgb(219, 219, 219);
+        &::before {
+            content: url(../img/rubik.png);
+            position: absolute;
+            right: -125px;
+            top: -75px;
+            @media screen and (max-width: $phone) {
+                display: none;
+            }
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -10px;
+            width: 95%;
+            height: 10px;
+            border-radius: 0 0 10px 10px;
+            background: #ecbf69;
+            @media screen and (max-width: $phone) {
+                height: 25px;
+            }
+        }
+        padding-bottom: 40px;
+    }
+
+    &__w {
+        @media screen and (max-width: $phone) {
+            width: 90vw;
+            margin: 0 auto;
+        }
+    }
+
+    &__form-text {
+        font-size: 30px;
+        text-align: center;
+        padding-top: 45px;
+    }
+
+    &__form-caption {
+        margin-top: 25px;
+    }
+
+    &__elements {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 35px;
+        @media screen and (max-width: $phone) {
+            flex-direction: column;
+        }
+        input {
+            @media screen and (max-width: $phone) {
+                margin-top: 15px;
+            }
+        }
+    }
+    &__btn {
+        @media screen and (max-width: $phone) {
+            margin-top: 15px;
+        }
+    }
+    @media screen and (max-width: $big_laptop) {
+        transform: scale(0.95);
+    }
+    @media screen and (max-width: $laptop) {
+        transform: scale(0.75);
+    }
+    @media screen and (max-width: $phone) {
+        transform: scale(1);
+    }
+}

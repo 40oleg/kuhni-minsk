@@ -1,0 +1,43 @@
+@import 
+'fonts',
+'variables',
+'common';
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.thanks-wrapper {
+    display: flex;
+    width: 100vw;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+}
+.thanks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    padding: 15px;
+    &__text1 {
+    }
+
+    &__text2 {
+        font-family: ProximaNova-Regular;
+    }
+
+    &__text3 {
+        text-align: center;
+        margin-top: 25px;
+        cursor: pointer;
+    }
+}
+.logo {
+}
+.caption {
+}
+.text {
+}

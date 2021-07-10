@@ -1,0 +1,243 @@
+.quiz-wrapper {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 1170px;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    background: #fff;
+    border-radius: 7px;
+    @media screen and (max-width: $phone) {
+        width: 100vw;
+        top: 0;
+        left: 0;
+        transform: translate(0, 0);
+        overflow-y: scroll;
+    }
+}
+
+.quiz {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: fit-content;
+    &__content {
+        padding: 40px 50px;
+        width: 1000px;
+        @media screen and (max-width: $phone) {
+            width: 100vw;
+            padding: 20px 20px;
+        }
+    }
+
+    &__text {
+        font-size: 21px;
+    }
+
+    &__text1 {
+        text-align: left;
+        em {
+            color: #736346;
+        }
+    }
+
+    &__text2 {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    &__caption {
+        font-size: 21px;
+        text-align: left;
+        width: fit-content;
+        padding: 2px;
+        margin-top: 20px;
+        em {
+            font-size: 32px;
+        }
+        @media screen and (max-width: $phone) {
+            text-align: center;
+        }
+    }
+
+    &__progress {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    &__step {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        background: #dadada;
+        border-radius: 50%;
+        &_active {
+            &::before {
+                position: absolute;
+                content: '';
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 14px;
+                height: 14px;
+                background: #736345;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    &__line {
+        position: relative;
+        width: 100px;
+        height: 10px;
+        background: #dadada;
+        &::before, &::after {
+            position: absolute;
+            content: '';
+            top: 0;
+            width: 10px;
+            height: inherit;
+            background: inherit;
+        }
+        &::before {
+            left: -5px;
+        }
+        &::after {
+            right: -5px;
+        }
+        @media screen and (max-width: $phone) {
+            width: 35px;
+        }
+    }
+
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        @media screen and (max-width: $phone) {
+            justify-content: space-between;
+        }
+    }
+
+    &__item {
+        margin-left: 25px;
+        margin-top: 25px;
+        @media screen and (max-width: $phone) {
+            margin-left: 0;
+        }
+    }
+
+    &__next-btn {
+        padding: 15px 65px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        .btn__text {
+            margin-left: 0;
+            font-size: 20px;
+        }
+    }
+
+    &__send-btn {
+        margin-left: 15px;
+        .btn__text {
+            margin-left: 0;
+        }
+        @media screen and (max-width: $phone) {
+            margin-top: 25px;
+        }
+    }
+
+    &__present {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: #eaeae9;
+        padding: 25px;
+        box-sizing: border-box;
+    }
+
+    &__img:not(.notimg) {
+        margin-top: 50px;
+        position: relative;
+        width: 200px;
+        &::before {
+            position: absolute;
+            content: url(../img/quiz-lock.png);
+            left: -75px;
+            top: -100px;
+        }
+    }
+    &::before {
+        position: absolute;
+        content: '';
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -10px;
+        width: 95%;
+        height: 10px;
+        background: #dcb262;
+        border-radius: 0 0 10px 10px;
+        @media screen and (max-width: $phone) {
+            display: none;
+        }
+    }
+    @media screen and (max-width: $phone) {
+        flex-direction: column;
+        height: 100vh;
+    }
+}
+
+.item {
+    width: fit-content;
+    &__image {
+    }
+
+    &__title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 15px;
+    }
+
+    &__circle {
+        position: relative;
+        width: 15px;
+        height: 15px;
+        border: 1px #000 solid;
+        border-radius: 50%;
+        &_active::before {
+            position: absolute;
+            content: '';
+            width: 6px;
+            height: 7px;
+            background: #736345;
+            border-radius: 50%;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &__name {
+        margin-left: 5px;
+        font-size: 13px;
+        @media screen and (max-width: $phone) {
+            font-size: 10px;
+        }
+    }
+
+    &__description {
+        font-size: 11px;
+        text-align: center;
+        @media screen and (max-width: $phone) {
+            font-size: 8px;
+        }
+    }
+}
+
+
+#quiz6 .quiz__items {
+    justify-content: center;
+}
